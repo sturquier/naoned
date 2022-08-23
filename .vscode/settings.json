@@ -1,3 +1,4 @@
 {
-    "dart.closingLabels": false
+    "dart.closingLabels": false,
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
