@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:naoned/config/theme.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar(
@@ -18,12 +19,14 @@ class Navbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: const Color(0xff3f51b5),
-      selectedItemColor: Colors.white,
-      unselectedItemColor: Colors.white70,
-      iconSize: 40,
+      backgroundColor: theme['cyan900'],
+      unselectedItemColor: theme['cyan200'],
+      selectedItemColor: theme['white'],
+      iconSize: 30,
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.perm_contact_calendar), label: 'Calendar'),
         BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Map')
       ],
       currentIndex: currentIndex,

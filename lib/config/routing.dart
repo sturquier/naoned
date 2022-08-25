@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:naoned/screens/calendar.dart';
 import 'package:naoned/screens/home.dart';
 import 'package:naoned/screens/map.dart';
 import 'package:naoned/widgets/navbar.dart';
@@ -12,7 +13,7 @@ class Routing extends StatefulWidget {
 
 class _RoutingState extends State<Routing> {
   int currentIndex = 0;
-  final screens = [const Home(), const Map()];
+  final screens = [const Home(), const Calendar(), const Map()];
 
   void _setCurrentIndex(int index) {
     setState(() => currentIndex = index);
