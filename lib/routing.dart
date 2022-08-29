@@ -13,7 +13,11 @@ class Routing extends StatefulWidget {
 
 class _RoutingState extends State<Routing> {
   int currentIndex = 0;
-  final screens = [const Home(), const Calendar(), const Map()];
+  final List<Widget> screens = [
+    const HomeScreen(),
+    const CalendarScreen(),
+    const MapScreen()
+  ];
 
   void _setCurrentIndex(int index) {
     setState(() => currentIndex = index);
@@ -23,9 +27,9 @@ class _RoutingState extends State<Routing> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: screens[currentIndex],
-      bottomNavigationBar: Navbar(
+      bottomNavigationBar: NavbarWidget(
           currentIndex: currentIndex,
-          setCurrentIndexCallback: (index) => _setCurrentIndex(index)),
+          setCurrentIndexCallback: (int index) => _setCurrentIndex(index)),
     );
   }
 }

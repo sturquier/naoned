@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:naoned/config/routing.dart';
+import 'package:naoned/routing.dart';
 
 void main() {
   runApp(const NaonedApp());

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:naoned/config/theme.dart';
 
-class Navbar extends StatelessWidget {
-  const Navbar(
+class NavbarWidget extends StatelessWidget {
+  const NavbarWidget(
       {Key? key,
       required this.currentIndex,
       required this.setCurrentIndexCallback})
       : super(key: key);
 
   final int currentIndex;
-  final void Function(dynamic index) setCurrentIndexCallback;
+  final void Function(int index) setCurrentIndexCallback;
 
   void _onItemTapped(int index) {
     setCurrentIndexCallback(index);
@@ -23,10 +23,11 @@ class Navbar extends StatelessWidget {
       unselectedItemColor: theme['cyan200'],
       selectedItemColor: theme['white'],
       iconSize: 30,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.perm_contact_calendar), label: 'Calendar'),
+        BottomNavigationBarItem(icon: Icon(Icons.event), label: 'Calendar'),
         BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Map')
       ],
       currentIndex: currentIndex,
