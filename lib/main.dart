@@ -6,9 +6,9 @@ void main() {
 }
 
 class NaonedApp extends StatelessWidget {
-  const NaonedApp({Key? key}) : super(key: key);
-
   static const String _title = 'Naoned';
+
+  const NaonedApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

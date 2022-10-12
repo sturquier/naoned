@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:naoned/config/endpoints.dart';
 import 'package:naoned/models/calendar_event.dart';
-import 'package:naoned/utils/paginated_model.dart';
+import 'package:naoned/models/paginated_model.dart';
 
 Future<PaginatedModel<CalendarEvent>> fetchCalendarEvents(
     int start, int rows, String date) async {
