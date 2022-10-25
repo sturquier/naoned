@@ -19,7 +19,7 @@ class NavbarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: theme['cyan400'],
+      backgroundColor: theme['cyan600'],
       unselectedItemColor: theme['cyan200'],
       selectedItemColor: theme['white'],
       iconSize: 30,

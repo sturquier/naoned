@@ -24,7 +24,7 @@ class CalendarEvent {
     return CalendarEvent(
         id: json['recordid'],
         name: json['fields']['nom'],
-        description: json['fields']['description'],
+        description: json['fields']['description'].split('.').join('.\r\n'),
         types: json['fields']['type']
             .split(',')
             .where((String type) => type.isNotEmpty)

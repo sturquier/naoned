@@ -63,7 +63,7 @@ class _CardWidgetState extends State<CardWidget> {
                   style: const TextStyle(fontSize: 18))),
         Container(
             alignment: Alignment.topLeft,
-            padding: const EdgeInsets.only(left: 15),
+            padding: const EdgeInsets.only(left: 15, bottom: 8),
             child: Wrap(
                 spacing: 8,
                 children: _getTags()
@@ -93,15 +93,15 @@ class _CardWidgetState extends State<CardWidget> {
             ElevatedButton(
               onPressed: () => _launchUrl(widget.calendarEvent.calendarLink),
               style: ElevatedButton.styleFrom(
-                  onPrimary: theme['white'], primary: theme['cyan900']),
-              child: const Text('Calendrier'),
+                  onPrimary: theme['white'], primary: theme['cyan700']),
+              child: const Text("Agenda"),
             ),
             if (widget.calendarEvent.websiteLink != '')
               ElevatedButton(
                   onPressed: () => _launchUrl(widget.calendarEvent.websiteLink),
                   style: ElevatedButton.styleFrom(
-                      onPrimary: theme['white'], primary: theme['cyan900']),
-                  child: const Text('Site web'))
+                      onPrimary: theme['white'], primary: theme['cyan700']),
+                  child: const Text('Site internet'))
           ],
         )
       ]),

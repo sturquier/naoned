@@ -1,8 +1,23 @@
 import 'package:intl/intl.dart';
 
-String getCurrentDate() {
-  final DateTime now = DateTime.now();
-  final DateFormat formatter = DateFormat('yyyy-MM-dd');
+DateTime getCurrentDate() {
+  return DateTime.now();
+}
 
-  return formatter.format(now);
+DateTime getFirstDayOfTheYear() {
+  final DateTime now = getCurrentDate();
+
+  return DateTime(now.year);
+}
+
+DateTime getLastDayOfTheYear() {
+  final DateTime now = getCurrentDate();
+
+  return DateTime(now.year, 12, 31);
+}
+
+String formatDate(DateTime date, String format) {
+  final DateFormat formatter = DateFormat(format);
+
+  return formatter.format(date);
 }
